@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\lexua\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lexua\\.nuget\\packages"
+    ]
+  }
+}
