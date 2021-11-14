@@ -5,13 +5,7 @@ using Catalog.Entities;
 
 namespace Catalog.Repositories
 {
-    public interface IInMemItemsRepository
-    {
-        Item GetItem(Guid id);
-        IEnumerable<Item> GetItems();
-    }
-
-    public class InMemItemsRepository : IInMemItemsRepository
+    public class InMemItemsRepository : IItemsRepository
     {
         private readonly List<Item> items = new()
         {
@@ -28,6 +22,11 @@ namespace Catalog.Repositories
         public Item GetItem(Guid id)
         {
             return items.Where(item => item.Id == id).SingleOrDefault();
+        }
+
+        public void CreateItem(Item item)
+        {
+            throw new NotImplementedException();
         }
     }
 }
